@@ -1,0 +1,63 @@
+{
+  "project_info": {
+    "project_number": "398476032812",
+    "firebase_url": "https://bbms2-3b112.firebaseio.com",
+    "project_id": "bbms2-3b112",
+    "storage_bucket": "bbms2-3b112.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:398476032812:android:ca42182600d7e3b6",
+        "android_client_info": {
+          "package_name": "com.dux.bbms2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "398476032812-f0242udkt3utkhrngp3iofkbhiee0qno.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dux.bbms2",
+            "certificate_hash": "5d4f0fafe6d3a3e5f06a84212042969b2cb8b198"
+          }
+        },
+        {
+          "client_id": "398476032812-fm1e25fpoa8e98q5vkv7cr194kf7biqv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.dux.bbms2",
+            "certificate_hash": "12ab0d8062c283d0072d1a4c1197ed1e2f80c994"
+          }
+        },
+        {
+          "client_id": "398476032812-d0ffnbfek776klehseab92tjld5lnc3t.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4A4P3Gai6rC-Y479Gb17B4asP7RBZLEk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "398476032812-d0ffnbfek776klehseab92tjld5lnc3t.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

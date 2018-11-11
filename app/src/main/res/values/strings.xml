@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">BBMS.2</string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="login">LOGIN</string>
+    <string name="register">REGISTER</string>
+    <string name="forgot_your_password">Forgot your password ?</string>
+    <string name="password1">Password</string>
+    <string name="dob_dd_mm_yyyy">DOB (DD/MM/YYYY) (Optional)</string>
+    <string name="mobile_no">Mobile No.(Optional)</string>
+    <string name="full_name">Full Name</string>
+    <string name="button">Button</string>
+    <string name="age_optional">Age (Optional)</string>
+    <string name="please_enter_your_phone_number">Please enter your Phone number</string>
+    <string name="xxxx_xxx_xxx">XXXX XXX XXX</string>
+    <string name="step_1_enter_mobile_number">Step 1 : Enter mobile Number</string>
+    <string name="send_otp">SEND OTP</string>
+    <string name="_91">+91 -</string>
+    <string name="step_2_enter_otp_code">Step 2 : Enter OTP code</string>
+    <string name="xxx_xxx">XXX XXX</string>
+    <string name="verify">Verify</string>
+
+    <string name="lbl_forgot_password">Forgot password?</string>
+    <string name="forgot_password_msg">We just need your registered Email Id to sent you password reset instructions.</string>
+    <string name="btn_forgot_password">Forgot your password?</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back"><![CDATA[<< Back]]></string>
+</resources>
