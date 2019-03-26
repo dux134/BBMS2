@@ -38,4 +38,15 @@
     <string name="btn_forgot_password">Forgot your password?</string>
     <string name="btn_reset_password">Reset Password</string>
     <string name="btn_back"><![CDATA[<< Back]]></string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="state">State</string>
+    <string name="pincode">Pincode</string>
+    <string name="city">City</string>
+    <string name="address">Address</string>
+    <string name="blood_group">Blood Group</string>
+    <string name="gender">Gender</string>
+    <string name="date_of_birth_dd_mm_yyyy">Date of Birth (DD/MM/YYYY)</string>
+    <string name="mobile">Mobile</string>
+    <string name="individual_sign_up">Individual Sign Up</string>
+    <string name="sign_out">Sign out</string>
 </resources>

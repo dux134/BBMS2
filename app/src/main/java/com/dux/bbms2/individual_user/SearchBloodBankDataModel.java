@@ -1,9 +1,10 @@
-package com.dux.bbms2.bank_user;
+package com.dux.bbms2.individual_user;
 
-public class BankUserDataModel {
-
+public class SearchBloodBankDataModel {
     private String fullname,mobile,email,account_type,state,city,address,pincode,uid,foundedYear;
     private String aPositive,aNegative,oPositive,oNegative,bPositive,bNegative,abPositive,abNegative;
+
+    private String bloodShown;
 
     public String getFullname() {
         return fullname;
@@ -147,5 +148,13 @@ public class BankUserDataModel {
 
     public void setAbNegative(String abNegative) {
         this.abNegative = abNegative;
+    }
+
+    public String getBloodShown() {
+        return bloodShown;
+    }
+
+    public void setBloodShown(String bloodShown) {
+        this.bloodShown = bloodShown;
     }
 }

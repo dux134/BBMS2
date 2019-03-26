@@ -4,10 +4,10 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -15,24 +15,18 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.dux.bbms2.bank_user.BloodBankDashboard;
-import com.dux.bbms2.individual_user.IndividualUserDashboard;
-import com.dux.bbms2.individual_user.IndividualUserDataModel;
+import com.dux.bbms2.bank_user.BloodBankRegister;
+import com.dux.bbms2.individual_user.IndividualRegister;
 import com.dux.bbms2.util.CheckNetworkConnection;
-import com.dux.bbms2.util.ConvetObjectIntoMap;
+import com.dux.bbms2.util.PrefManager;
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
-import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 
 public class LoginActivity extends AppCompatActivity {
@@ -59,9 +53,6 @@ public class LoginActivity extends AppCompatActivity {
         bank = findViewById(R.id.checkBox_bank);
         
         mAuth = FirebaseAuth.getInstance();
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this,IndividualUserDashboard.class));
-        }
 
         login.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -86,7 +77,26 @@ public class LoginActivity extends AppCompatActivity {
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
+                final AlertDialog.Builder builder;
+                builder = new AlertDialog.Builder(LoginActivity.this, R.style.Theme_AppCompat_DayNight_Dialog);
+                builder.setCancelable(true);
+                builder
+                        .setMessage("How do you want to register? A individual or as blood bank!")
+                        .setPositiveButton("bank", new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog, int i) {
+                                startActivity(new Intent(LoginActivity.this,BloodBankRegister.class));
+                            }
+                        })
+                        .setNegativeButton("individual", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                startActivity(new Intent(LoginActivity.this,IndividualRegister.class));
+                            }
+                        })
+                        .setIcon(android.R.drawable.ic_dialog_alert)
+                        .show();
+
+
             }
         });
 
@@ -129,9 +139,10 @@ public class LoginActivity extends AppCompatActivity {
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
-                        progressDialog.dismiss();
+
                         if (!task.isSuccessful()) {
                             // there was an error
+                            progressDialog.dismiss();
                             Toast.makeText(LoginActivity.this, "Authentication failed!", Toast.LENGTH_LONG).show();
                         } else {
                             checkUserInDatabase();
@@ -142,14 +153,17 @@ public class LoginActivity extends AppCompatActivity {
 
     private void checkUserInDatabase() {
         String accountType = "";
-        if(individual.isChecked())
+        PrefManager prefManager = new PrefManager(LoginActivity.this);
+        if(individual.isChecked()) {
             accountType = "individual_user";
-        else
-            accountType = "bank_user";
+            prefManager.setAccountType(accountType);
+        } else {
+            accountType = "blood_bank";
+            prefManager.setAccountType(accountType);
 
+        }
 
         final DocumentReference docRef = db.collection(accountType).document(mAuth.getCurrentUser().getUid());
-        final String finalAccountType = accountType;
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -159,10 +173,8 @@ public class LoginActivity extends AppCompatActivity {
                     if (document != null) {
                         if(Objects.requireNonNull(mAuth.getCurrentUser()).isEmailVerified()) {
 //                                createUserInDatabase(mEmail,mPassword);
-                            if (finalAccountType.equalsIgnoreCase("individual"))
-                                startActivity(new Intent(LoginActivity.this,IndividualUserDashboard.class));
-                            else
-                                startActivity(new Intent(LoginActivity.this,BloodBankDashboard.class));
+                            startActivity(new Intent(LoginActivity.this,SplashScreen.class));
+                            finish();
                         } else
                             alertForEmailVerification();
                     } else {
@@ -174,12 +186,13 @@ public class LoginActivity extends AppCompatActivity {
                     progressDialog.dismiss();
                     mAuth.signOut();
                 }
+//                progressDialog.dismiss();
             }
         });
     }
 
 //    private void createUserInDatabase(String mEmail, String mPassword) {
-////        Map<String, Object> studentData = ConvetObjectIntoMap.Object(new IndividualUserDataModel("fhkjsh",));
+//        Map<String, Object> studentData = ConvetObjectIntoMap.Object(new IndividualUserDataModel("fhkjsh",));
 //
 //        studentData.put("fullname","");
 //        studentData.put("mobile","");
