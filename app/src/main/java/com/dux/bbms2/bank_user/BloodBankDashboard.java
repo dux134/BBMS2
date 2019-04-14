@@ -38,7 +38,7 @@ public class BloodBankDashboard extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private ProgressDialog progressDialog;
     private FirebaseUser firebaseUser;
-    private BankUserDataModel bloodBankUser = null;
+    public static BankUserDataModel bloodBankUser = null;
     TextView textView8;
 
     @Override
@@ -56,7 +56,6 @@ public class BloodBankDashboard extends AppCompatActivity {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         textView8 = findViewById(R.id.textView8);
-        loadUserDetails();
 
         CardView updateBlood = findViewById(R.id.update_blood);
         updateBlood.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +73,20 @@ public class BloodBankDashboard extends AppCompatActivity {
                 startActivity(new Intent(BloodBankDashboard.this,ChangePassword.class));
             }
         });
+
+        CardView updateDetails = findViewById(R.id.bank_update_details);
+        updateDetails.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(BloodBankDashboard.this,BankUpdateDetails.class));
+            }
+        });
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        loadUserDetails();
     }
 
     private void loadUserDetails() {

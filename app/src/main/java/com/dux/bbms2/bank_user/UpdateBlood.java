@@ -57,21 +57,21 @@ public class UpdateBlood extends AppCompatActivity {
         abp = findViewById(R.id.editText_ab_p);
         abn = findViewById(R.id.editText_ab_n);
 
-        ap.setText(bloodBankUser.getaPositive()+units);
-        an.setText(bloodBankUser.getaNegative()+units);
-        bp.setText(bloodBankUser.getbPositive()+units);
-        bn.setText(bloodBankUser.getbNegative()+units);
-        op.setText(bloodBankUser.getoPositive()+units);
-        on.setText(bloodBankUser.getoNegative()+units);
-        abp.setText(bloodBankUser.getAbPositive()+units);
-        abn.setText(bloodBankUser.getAbNegative()+units);
+        ap.setText(bloodBankUser.getaPositive()+"");
+        an.setText(bloodBankUser.getaNegative()+"");
+        bp.setText(bloodBankUser.getbPositive()+"");
+        bn.setText(bloodBankUser.getbNegative()+"");
+        op.setText(bloodBankUser.getoPositive()+"");
+        on.setText(bloodBankUser.getoNegative()+"");
+        abp.setText(bloodBankUser.getAbPositive()+"");
+        abn.setText(bloodBankUser.getAbNegative()+"");
 
         apAdd = findViewById(R.id.a_p_plus_button);
         apAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String str = ap.getText().toString().substring(0,2);
-                ap.setText(addButtonAction(str)+units);
+                String str = ap.getText().toString();
+                ap.setText(addButtonAction(str));
             }
         });
         anAdd = findViewById(R.id.a_n_plus_button);
@@ -79,7 +79,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = an.getText().toString().substring(0,2);
-                an.setText(addButtonAction(str)+units);
+                an.setText(addButtonAction(str));
             }
         });
         opAdd = findViewById(R.id.o_p_plus_button);
@@ -87,7 +87,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = op.getText().toString().substring(0,2);
-                op.setText(addButtonAction(str)+units);
+                op.setText(addButtonAction(str));
             }
         });
         onAdd = findViewById(R.id.o_n_plus_button);
@@ -95,7 +95,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = on.getText().toString().substring(0,2);
-                on.setText(addButtonAction(str)+units);
+                on.setText(addButtonAction(str));
             }
         });
         bpAdd = findViewById(R.id.b_p_plus_button);
@@ -103,7 +103,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = bp.getText().toString().substring(0,2);
-                bp.setText(addButtonAction(str)+units);
+                bp.setText(addButtonAction(str));
             }
         });
         bnAdd = findViewById(R.id.b_n_plus_button);
@@ -111,7 +111,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = bn.getText().toString().substring(0,2);
-                bn.setText(addButtonAction(str)+units);
+                bn.setText(addButtonAction(str));
             }
         });
         abpAdd = findViewById(R.id.ab_p_plus_button);
@@ -119,7 +119,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = abp.getText().toString().substring(0,2);
-                abp.setText(addButtonAction(str)+units);
+                abp.setText(addButtonAction(str));
             }
         });
         abnAdd = findViewById(R.id.ab_n_plus_button);
@@ -127,7 +127,7 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = abn.getText().toString().substring(0,2);
-                abn.setText(addButtonAction(str)+units);
+                abn.setText(addButtonAction(str));
             }
         });
 
@@ -136,66 +136,72 @@ public class UpdateBlood extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 String str = ap.getText().toString().substring(0,2);
-                ap.setText(subButtonAction(str)+units);
+                ap.setText(subButtonAction(str));
             }
         });
+
         anSub = findViewById(R.id.a_n_sub_button);
         anSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = an.getText().toString().substring(0,2);
-                an.setText(subButtonAction(str)+units);
+                an.setText(subButtonAction(str));
             }
         });
+
         opSub = findViewById(R.id.o_p_sub_button);
         opSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = op.getText().toString().substring(0,2);
-                op.setText(subButtonAction(str)+units);
+                op.setText(subButtonAction(str));
             }
         });
+
         onSub = findViewById(R.id.o_n_sub_button);
         onSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = on.getText().toString().substring(0,2);
-                on.setText(subButtonAction(str)+units);
+                on.setText(subButtonAction(str));
             }
         });
+
         bpSub = findViewById(R.id.b_p_sub_button);
         bpSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = bp.getText().toString().substring(0,2);
-                bp.setText(subButtonAction(str)+units);
+                bp.setText(subButtonAction(str));
             }
         });
+
         bnSub = findViewById(R.id.b_n_sub_button);
         bnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = bn.getText().toString().substring(0,2);
-                bn.setText(subButtonAction(str)+units);
+                bn.setText(subButtonAction(str));
             }
         });
+
         abnSub = findViewById(R.id.ab_n_sub_button);
         abnSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = abn.getText().toString().substring(0,2);
-                abn.setText(subButtonAction(str)+units);
+                abn.setText(subButtonAction(str));
             }
         });
+
         abpSub = findViewById(R.id.ab_p_sub_button);
         abpSub.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 String str = abp.getText().toString().substring(0,2);
-                abn.setText(subButtonAction(str)+units);
+                abn.setText(subButtonAction(str));
             }
         });
-
 
         Button update = findViewById(R.id.updateBlood_update);
         update.setOnClickListener(new View.OnClickListener() {
@@ -207,22 +213,20 @@ public class UpdateBlood extends AppCompatActivity {
     }
 
     private void updateAction() {
-
-
         progressDialog = new ProgressDialog(UpdateBlood.this);
         progressDialog.setMessage("Please wait...");
         progressDialog.setCancelable(false);
         progressDialog.show();
 
         Map<String ,Object> studentData = new HashMap<>();
-        studentData.put("aPositive",stringToInt(ap.getText().toString()));
-        studentData.put("aNegative",stringToInt(an.getText().toString()));
-        studentData.put("abPositive",stringToInt(abp.getText().toString()));
-        studentData.put("abNegative",stringToInt(abn.getText().toString()));
-        studentData.put("bPositive",stringToInt(bp.getText().toString()));
-        studentData.put("bNegative",stringToInt(bn.getText().toString()));
-        studentData.put("oPositive",stringToInt(op.getText().toString()));
-        studentData.put("oNegative",stringToInt(on.getText().toString()));
+        studentData.put("aPositive",Integer.parseInt(ap.getText().toString()));
+        studentData.put("aNegative",Integer.parseInt(an.getText().toString()));
+        studentData.put("abPositive",Integer.parseInt(abp.getText().toString()));
+        studentData.put("abNegative",Integer.parseInt(abn.getText().toString()));
+        studentData.put("bPositive",Integer.parseInt(bp.getText().toString()));
+        studentData.put("bNegative",Integer.parseInt(bn.getText().toString()));
+        studentData.put("oPositive",Integer.parseInt(op.getText().toString()));
+        studentData.put("oNegative",Integer.parseInt(on.getText().toString()));
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -240,13 +244,6 @@ public class UpdateBlood extends AppCompatActivity {
                         progressDialog.dismiss();
                     }
                 });
-    }
-
-    private String stringToInt(String str) {
-        str = str + "units";
-        String[] string = str.split(" ");
-
-        return string[0];
     }
 
     private String addButtonAction(String str) {

@@ -32,7 +32,7 @@ public class IndividualUserDashboard extends AppCompatActivity {
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private ProgressDialog progressDialog;
     private FirebaseUser firebaseUser;
-    private IndividualUserDataModel individualUser = null;
+    public static IndividualUserDataModel individualUser = null;
 
     private TextView textView,address;
 
@@ -74,11 +74,26 @@ public class IndividualUserDashboard extends AppCompatActivity {
         updateDetails.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(IndividualUserDashboard.this,UpdateDetails.class));
+            }
+        });
 
+        CardView searchIndividualUser = findViewById(R.id.search_individual_user);
+        searchIndividualUser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(IndividualUserDashboard.this,SearchIndividualUser.class));
             }
         });
 
     }
+
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        loadUserDetails();
+    }
+
     private void loadUserDetails() {
 
         final FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder()
@@ -98,8 +113,6 @@ public class IndividualUserDashboard extends AppCompatActivity {
                             if (document.exists()) {
                                 Log.d("TaG", "DocumentSnapshot data: " + document.getData());
                                 individualUser = document.toObject(IndividualUserDataModel.class);
-
-                                assert individualUser != null;
                                 textView.setText("Hi, "+individualUser.getFullname());
                                 address.setText(individualUser.getAddress());
 

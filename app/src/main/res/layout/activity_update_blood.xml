@@ -79,8 +79,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_a_p"
                         app:layout_constraintTop_toBottomOf="@+id/textView_a_p" />
 
-                    <EditText
-                        android:id="@+id/editText_a_p"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -91,7 +90,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/a_p_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/a_p_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/a_p_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/a_p_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/a_p_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_a_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/a_p_sub_button"
@@ -143,8 +147,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_a_n"
                         app:layout_constraintTop_toBottomOf="@+id/textView_a_n" />
 
-                    <EditText
-                        android:id="@+id/editText_a_n"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -155,8 +158,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/a_n_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/a_n_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/a_n_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/a_n_plus_button" />
-
+                        app:layout_constraintTop_toTopOf="@+id/a_n_plus_button">
+                        <EditText
+                        android:id="@+id/editText_a_n"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </android.support.design.widget.TextInputLayout>
                     <Button
                         android:id="@+id/a_n_sub_button"
                         android:layout_width="wrap_content"
@@ -208,8 +215,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_b_p"
                         app:layout_constraintTop_toBottomOf="@+id/textView_b_p" />
 
-                    <EditText
-                        android:id="@+id/editText_b_p"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -220,7 +226,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/b_p_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/b_p_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/b_p_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/b_p_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/b_p_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_b_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/b_p_sub_button"
@@ -275,8 +286,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_b_n"
                         app:layout_constraintTop_toBottomOf="@+id/textView_b_n" />
 
-                    <EditText
-                        android:id="@+id/editText_b_n"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -287,7 +297,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/b_n_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/b_n_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/b_n_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/b_n_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/b_n_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_b_n"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/b_n_sub_button"
@@ -341,8 +356,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_ab_p"
                         app:layout_constraintTop_toBottomOf="@+id/textView_ab_p" />
 
-                    <EditText
-                        android:id="@+id/editText_ab_p"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -353,7 +367,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/ab_p_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/ab_p_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/ab_p_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/ab_p_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/ab_p_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_ab_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/ab_p_sub_button"
@@ -405,8 +424,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_ab_n"
                         app:layout_constraintTop_toBottomOf="@+id/textView_ab_n" />
 
-                    <EditText
-                        android:id="@+id/editText_ab_n"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -417,7 +435,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/ab_n_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/ab_n_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/ab_n_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/ab_n_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/ab_n_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_ab_n"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/ab_n_sub_button"
@@ -468,8 +491,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_o_p"
                         app:layout_constraintTop_toBottomOf="@+id/textView_o_p" />
 
-                    <EditText
-                        android:id="@+id/editText_o_p"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -480,7 +502,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/o_p_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/o_p_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/o_p_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/o_p_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/o_p_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_o_p"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/o_p_sub_button"
@@ -535,8 +562,7 @@
                         app:layout_constraintStart_toEndOf="@+id/textView_o_n"
                         app:layout_constraintTop_toBottomOf="@+id/textView_o_n" />
 
-                    <EditText
-                        android:id="@+id/editText_o_n"
+                    <android.support.design.widget.TextInputLayout
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="8dp"
@@ -547,7 +573,12 @@
                         app:layout_constraintBottom_toBottomOf="@+id/o_n_plus_button"
                         app:layout_constraintEnd_toStartOf="@+id/o_n_sub_button"
                         app:layout_constraintStart_toEndOf="@+id/o_n_plus_button"
-                        app:layout_constraintTop_toTopOf="@+id/o_n_plus_button" />
+                        app:layout_constraintTop_toTopOf="@+id/o_n_plus_button" >
+                        <EditText
+                            android:id="@+id/editText_o_n"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+                    </android.support.design.widget.TextInputLayout>
 
                     <Button
                         android:id="@+id/o_n_sub_button"

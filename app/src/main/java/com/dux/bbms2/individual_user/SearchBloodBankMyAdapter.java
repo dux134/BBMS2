@@ -40,21 +40,15 @@ public class SearchBloodBankMyAdapter extends RecyclerView.Adapter<SearchBloodBa
     public SearchBloodBankViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.recycler_item_search_blood_bank,parent,false);
         SearchBloodBankViewHolder holder = new SearchBloodBankViewHolder(view,listener);
-
         return holder;
     }
 
     @Override
     public void onBindViewHolder(@NonNull SearchBloodBankViewHolder holder, final int position) {
-//        holder.unitsAvailable.setText(list.get(position).);
         holder.unitsAvailable.setText(list.get(position).getBloodShown() + " Units Available");
         holder.address.setText(list.get(position).getAddress());
         holder.bloodBankName.setText(list.get(position).getFullname());
-
         holder.mobile.setText("Ph no. : +91-"+list.get(position).getMobile());
-
-//        if(Integer.valueOf(list.get(position).getBloodShown()) <10 )
-//            holder.unitsAvailable.setTextColor(Color.parseColor("#D81B60"));
     }
 
     @Override
@@ -73,7 +67,6 @@ public class SearchBloodBankMyAdapter extends RecyclerView.Adapter<SearchBloodBa
 
         public SearchBloodBankViewHolder(View itemView, final RecyclerItemListener listener) {
             super(itemView);
-
             bloodBankName = itemView.findViewById(R.id.title);
             address = itemView.findViewById(R.id.description);
             unitsAvailable = itemView.findViewById(R.id.units_available);

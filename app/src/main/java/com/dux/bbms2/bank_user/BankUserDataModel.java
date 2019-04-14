@@ -3,7 +3,7 @@ package com.dux.bbms2.bank_user;
 public class BankUserDataModel {
 
     private String fullname,mobile,email,account_type,state,city,address,pincode,uid,foundedYear;
-    private String aPositive,aNegative,oPositive,oNegative,bPositive,bNegative,abPositive,abNegative;
+    private int aPositive,aNegative,oPositive,oNegative,bPositive,bNegative,abPositive,abNegative;
 
     public String getFullname() {
         return fullname;
@@ -85,67 +85,67 @@ public class BankUserDataModel {
         this.foundedYear = foundedYear;
     }
 
-    public String getaPositive() {
+    public int getaPositive() {
         return aPositive;
     }
 
-    public void setaPositive(String aPositive) {
+    public void setaPositive(int aPositive) {
         this.aPositive = aPositive;
     }
 
-    public String getaNegative() {
+    public int getaNegative() {
         return aNegative;
     }
 
-    public void setaNegative(String aNegative) {
+    public void setaNegative(int aNegative) {
         this.aNegative = aNegative;
     }
 
-    public String getoPositive() {
+    public int getoPositive() {
         return oPositive;
     }
 
-    public void setoPositive(String oPositive) {
+    public void setoPositive(int oPositive) {
         this.oPositive = oPositive;
     }
 
-    public String getoNegative() {
+    public int getoNegative() {
         return oNegative;
     }
 
-    public void setoNegative(String oNegative) {
+    public void setoNegative(int oNegative) {
         this.oNegative = oNegative;
     }
 
-    public String getbPositive() {
+    public int getbPositive() {
         return bPositive;
     }
 
-    public void setbPositive(String bPositive) {
+    public void setbPositive(int bPositive) {
         this.bPositive = bPositive;
     }
 
-    public String getbNegative() {
+    public int getbNegative() {
         return bNegative;
     }
 
-    public void setbNegative(String bNegative) {
+    public void setbNegative(int bNegative) {
         this.bNegative = bNegative;
     }
 
-    public String getAbPositive() {
+    public int getAbPositive() {
         return abPositive;
     }
 
-    public void setAbPositive(String abPositive) {
+    public void setAbPositive(int abPositive) {
         this.abPositive = abPositive;
     }
 
-    public String getAbNegative() {
+    public int getAbNegative() {
         return abNegative;
     }
 
-    public void setAbNegative(String abNegative) {
+    public void setAbNegative(int abNegative) {
         this.abNegative = abNegative;
     }
 }
